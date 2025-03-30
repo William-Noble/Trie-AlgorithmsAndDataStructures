@@ -46,8 +46,8 @@ class trie:
 
     def print_recursive(self,current_node,depth):
         for i in range(26):
-            if current_node.child[i] is not None:
-                self.print_recursive(current_node.child[i], depth+1)
+            if current_node.child[25 - i] is not None:
+                self.print_recursive(current_node.child[25 - i], depth+1)
             
         print("   |   " * depth + f"{current_node.key}, {current_node.word_count}, {current_node.word_end}")
             
